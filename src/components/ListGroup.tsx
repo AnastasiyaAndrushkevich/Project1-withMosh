@@ -9,7 +9,7 @@ interface Props {
 }
 
 function ListGroup({ items, heading, onSelectItem }: Props) {
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [selectedIndexV2, setSelectedIndex] = useState(-1);
 
   return (
     <>
@@ -19,7 +19,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
         {items.map((item, index) => (
           <li
             className={
-              selectedIndex === index
+              selectedIndexV2 === index
                 ? "list-group-item active"
                 : "list-group-item"
             }
